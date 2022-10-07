@@ -1,7 +1,8 @@
 import * as React from 'react'
 import { createDrawerNavigator, DrawerContent } from '@react-navigation/drawer'
 import { NavigationContainer } from '@react-navigation/native'
-import { SafeAreaView } from 'react-native'
+import { SafeAreaView,StyleSheet } from 'react-native'
+// Antigas
 import ImageApi from '../components/ImageApi'
 import QCode from '../components/QRCode'
 import Calendário from '../components/Calendário'
@@ -14,17 +15,34 @@ import Web from '../components/Web'
 import ContadorTime from '../components/ContadorTime'
 import BlocoNotas from '../components/BlocoNotas'
 import Portfolio from '../components/Portfolio'
+// Novas
+import Calculadora from '../components/Calculadora'
+import Loja from '../components/Loja'
+import Music from '../components/Music'
+import Login from '../components/Login'
+import Mapa from '../components/Mapa'
+import Mural from '../components/Mural'
+import Radio from '../components/Radio'
+import ApiExterna from '../components/ApiExterna'
+import Senha from '../components/GeradorSenha'
+import BichVirtu from '../components/BichVirtu'
+import Animação from '../components/Animação'
 const Drawer = createDrawerNavigator();
 import Icon from 'react-native-vector-icons/FontAwesome'
+import GeradorSenha from '../components/GeradorSenha'
 export default function Sidebar(){
   return(
       <NavigationContainer>
-      <Drawer.Navigator screenOptions={{
+      <Drawer.Navigator style={Styles.Drawer} 
+      screenOptions={{
         drawerStyle:{
-          backgroundColor:"rgb(92, 36, 92)",
+          backgroundColor:"rgb(11, 11, 78)",
+        },
+        drawerLabelStyle:{
+          color:"white"
         }
-      }}>
-      <Drawer.Screen  name='Bloco de Notas' options={{
+        }}>
+      <Drawer.Screen name='Bloco de Notas' options={{
         drawerIcon:({focused,color,size}) => (
           <Icon name='sticky-note-o' size={25} color={color}/>
         ),
@@ -125,7 +143,23 @@ export default function Sidebar(){
             color:'transparent',
             fontSize:50,
           }}} component={Portfolio}/>
+        <Drawer.Screen name='Calculadora' component={Calculadora}/>
+        <Drawer.Screen name='Loja' component={Loja}/>
+        <Drawer.Screen name='Mural' component={Mural}/>
+        <Drawer.Screen name='Music' component={Music}/>
+        <Drawer.Screen name='Login' component={Login}/>
+        <Drawer.Screen name='Mapa' component={Mapa}/>
+        <Drawer.Screen name='ApiExterna' component={ApiExterna}/>
+        <Drawer.Screen name='Animação' component={Animação}/>
+        <Drawer.Screen name='Radio' component={Radio}/>
+        <Drawer.Screen name='Senha' component={GeradorSenha}/>
+        <Drawer.Screen name='Bichinho Virtual' component={BichVirtu}/>
       </Drawer.Navigator>
       </NavigationContainer>
   )
 }
+const Styles = StyleSheet.create({
+  Drawer:{
+    color:"red"
+  }
+})

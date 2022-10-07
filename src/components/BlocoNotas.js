@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { Ionicons, MaterialIcons } from "@expo/vector-icons";
-import {Keyboard,Alert,KeyboardAvoidingView,Platform,ScrollView} from "react-native";
+import {Keyboard,StyleSheet,Alert,KeyboardAvoidingView,Platform,ScrollView} from "react-native";
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {Text,View,TouchableOpacity,FlatList} from "react-native";
-import {BlocoBK,BlocoInput,Adicionar,ItemAPi,CorpoApi,ButtonApi,ViewApi} from './Styles/StylesApi'
+import {BlocoBK,BlocoInput,Adicionar,ItemAPi,CorpoApi,ButtonApi,ViewApi,CorpoNotas} from './Styles/StylesApi'
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 export default function BlocoNotas() {
   const [task2, setTask] = useState([]);
   const [newTask, setNewTask] = useState("");
@@ -54,16 +55,17 @@ export default function BlocoNotas() {
         behavior="padding"
         enabled={Platform.OS === "ios"}
       >
+      <ScrollView>
         <View >
         <BlocoBK source={require("../../assets/Arquivos/15.jpg")}>
-        <ScrollView>
-          <View >
+          <CorpoNotas style={styles.CorpoNotas}>
             <FlatList
               data={task2}
               keyExtractor={item => item.toString()}
               showsVerticalScrollIndicator={false}
               renderItem={({ item }) => (
                 <ViewApi>
+                  <ScrollView>
                   <CorpoApi><ItemAPi >{item}
                   <ButtonApi onPress={() => removeTask(item)}>
                     <MaterialIcons
@@ -73,22 +75,31 @@ export default function BlocoNotas() {
                     />
                   </ButtonApi>
                   </ItemAPi></CorpoApi>
+                  </ScrollView>
                 </ViewApi>
               )}
             />
-          </View>
+          </CorpoNotas>
           <View>
-            <BlocoInput placeholderTextColor="#fff" autoCorrect={true} value={newTask} placeholder="Adicione uma Nota" onChangeText={text => setNewTask(text)}/>
+            <BlocoInput style={styles.Inputs} placeholderTextColor="#fff" autoCorrect={true} value={newTask} placeholder="Adicione uma Nota" onChangeText={text => setNewTask(text)}/>
             <TouchableOpacity onPress={() => addTask()}>
             <Adicionar>
               <Ionicons name="ios-add" size={40} color="white" />
               </Adicionar>
             </TouchableOpacity>
           </View>
-          </ScrollView>
           </BlocoBK>
         </View>
+        </ScrollView>
       </KeyboardAvoidingView>
     </>
   );
 }
+const styles = StyleSheet.create({
+  Inputs:{
+    marginTop: wp("2%")
+  },
+  CorpoNotas:{
+    height: wp("160%")
+  }
+})
