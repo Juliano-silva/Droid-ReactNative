@@ -1,0 +1,38 @@
+import styled from "styled-components";
+export const FalarBK = styled.ImageBackground`
+height: 100%;
+`
+export const FalarCorpo = styled.View`
+margin: auto;
+width: 90%;
+border-radius: 40px;
+opacity: 0.9;
+`
+export const BotaoFla = styled.Text`
+text-transform: uppercase;
+font-size: 23px;
+text-align: center;
+color: yellow;
+text-shadow: 4px 4px 2px blue;
+width: 100%;
+margin: auto;
+border-radius: 20px;
+`
+export const InputFalar = styled.TextInput`
+border: 2px solid rgb(25, 25, 134);
+font-size: 40px;
+text-align: center;
+color: blue;
+text-shadow: 2px 2px slateblue;
+text-transform: capitalize;
+background: steelblue;
+margin-top: 20px;
+border-radius: 40px;
+`
+export const CorpoFalarView = styled.View`
+margin: auto;
+background: #121212
+margin-top: 5px;
+border-radius: 40px;
+width: 90%;
+`

@@ -1,40 +1,29 @@
 import React from 'react';
-import { Platform, StyleSheet, Text, ScrollView,ImageBackground } from 'react-native';
-
+import { Platform, Text, ScrollView,ImageBackground } from 'react-native';
+import {ConfigBk,ConfigTexto,ConfigView} from './Styles/StyleConfig'
 const App = () => {
   return (
-    <ScrollView contentContainerStyle={styles.container}>
-      <ImageBackground source={require('../../assets/Arquivos/4.jpg')}>
-      <Text>OS</Text>
-      <Text style={styles.value}>{Platform.OS}</Text>
-      <Text>OS Version</Text>
-      <Text style={styles.value}>{Platform.Version}</Text>
-      <Text>isTV</Text>
-      <Text style={styles.value}>{Platform.isTV.toString()}</Text>
+      <ConfigBk source={require('../../assets/Arquivos/4.jpg')}>
+        <ScrollView>
+        <ConfigView>
+      <ConfigTexto>Sistema Operacional</ConfigTexto>
+      <ConfigTexto>{Platform.OS}</ConfigTexto>
+      <ConfigTexto>Sistema Operacional Versão</ConfigTexto>
+      <ConfigTexto>{Platform.Version}</ConfigTexto>
+      <ConfigTexto>isTV</ConfigTexto>
+      <ConfigTexto>{Platform.isTV.toString()}</ConfigTexto>
       {Platform.OS === 'ios' && (
         <>
-          <Text>isPad</Text>
-          <Text style={styles.value}>{Platform.isPad.toString()}</Text>
+          <ConfigTexto>isPad</ConfigTexto>
+          <ConfigTexto>{Platform.isPad.toString()}</ConfigTexto>
         </>
       )}
-      <Text>Constants</Text>
-      <Text style={styles.value}>{JSON.stringify(Platform.constants, null, 2)}</Text>
-      </ImageBackground>
-    </ScrollView>
+      <ConfigTexto>Constantes</ConfigTexto>
+      <ConfigTexto>{JSON.stringify(Platform.constants, null, 2)}</ConfigTexto>
+      </ConfigView>
+      </ScrollView>
+      </ConfigBk>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  value: {
-    fontWeight: '600',
-    padding: 4,
-    marginBottom: 8,
-  },
-});
 
 export default App;

@@ -1,8 +1,7 @@
 body{
-    font-style: italic;
-    border: 2px solid purple;
-    color: white;
-    width: 80%;
-    border-radius: 20px;
-    margin: auto;
+margin: auto;
+background: #121212;
+border-radius: 40px;
+width: 90%;
+margin-top: 20px;
 }

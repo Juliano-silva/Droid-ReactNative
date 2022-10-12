@@ -60,7 +60,7 @@ export default function App() {
     return recordings.map((recordingLine, index) => {
       return (
         <Gravações key={index}>
-          <Gravação >Diario de bordo {index + 1} - {recordingLine.duration}</Gravação>
+          <Gravação >Diario de bordo {index + 1}  {recordingLine.duration}</Gravação>
           <Play onPress={() => recordingLine.sound.replayAsync()}>Iniciar</Play>
           <Compartilhar onPress={() => Sharing.shareAsync(recordingLine.file)}>Compartilhar</Compartilhar>
         </Gravações>

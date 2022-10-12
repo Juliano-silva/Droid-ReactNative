@@ -1,5 +1,6 @@
 import React,{useState} from "react";
-import { View,Text,Button,TextInput } from "react-native";
+import { View,Text,Button,TextInput, ImageBackground } from "react-native";
+import {FalarBK,FalarCorpo,BotaoFla,InputFalar,CorpoFalarView} from './Styles/StyleFalar'
 import * as Speech from 'expo-speech'
 export default function Falar(){
     const [text,setText] = useState('Olá,Mundo')
@@ -18,13 +19,34 @@ export default function Falar(){
             language: 'ja-JP'
         });
     }
+    function FalarRusso(){
+        Speech.speak(text,{
+            language: 'ru'
+        });
+    }
+    function FalarItaliano(){
+        Speech.speak(text,{
+            language: 'it'
+        });
+    }
+    function FalarFrances(){
+        Speech.speak(text,{
+            language: 'ff'
+        });
+    }
     return(
-    <View>
-        <Text>Falar</Text>
-        <TextInput onChangeText={e => setText(e)} placeholder="Digite Algo"/>
-        <Button title="Falar" onPress={Falar}/>
-        <Button title="Falar no Inglês" onPress={FalarIngles}/>
-        <Button title="Falar no Japão" onPress={FalarJapao}/>
-    </View>
+    <FalarBK source={require("../../assets/Arquivos/5.jpg")}>
+    <FalarCorpo>
+        <InputFalar placeholderTextColor="blue" onChangeText={e => setText(e)} placeholder="Digite Algo"/>
+        <CorpoFalarView>
+        <BotaoFla onPress={Falar}>Falando em Brasileiro</BotaoFla>
+        <BotaoFla onPress={FalarIngles}>Falando em Inglês</BotaoFla>
+        <BotaoFla onPress={FalarItaliano}>Falar em Italiano</BotaoFla>
+        <BotaoFla onPress={FalarJapao}>Falando em Japones</BotaoFla>
+        <BotaoFla onPress={FalarRusso}>Falando em Russo</BotaoFla>
+        <BotaoFla onPress={FalarFrances}>Falando em Frances</BotaoFla>
+        </CorpoFalarView>
+    </FalarCorpo>
+    </FalarBK>
     )
 }

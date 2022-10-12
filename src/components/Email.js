@@ -14,14 +14,13 @@ export default class App extends React.Component {
     }
 
     handleEmail = () => {
-        const to = ['tiaan@email.com', 'foo@bar.com'] // string or array of email addresses
+        const to = ['tiaan@email.com', 'foo@bar.com']
         email(to, {
-            // Optional additional arguments
-            cc: ['bazzy@moo.com', 'doooo@daaa.com'], // string or array of email addresses
-            bcc: 'mee@mee.com', // string or array of email addresses
+            cc: ['bazzy@moo.com', 'doooo@daaa.com'], 
+            bcc: 'mee@mee.com', 
             subject: 'Show how to use',
             body: 'Some body right here',
-            checkCanOpen: false // Call Linking.canOpenURL prior to Linking.openURL
+            checkCanOpen: false
         }).catch(console.error)
     }
 }
@@ -29,7 +28,8 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#fff',
+        backgroundColor:'red',
+        marginTop:800,
         alignItems: 'center',
         justifyContent: 'center'
     }

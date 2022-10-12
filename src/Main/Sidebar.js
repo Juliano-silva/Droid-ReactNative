@@ -144,6 +144,9 @@ export default function Sidebar(){
             fontSize:50,
           }}} component={Portfolio}/>
         <Drawer.Screen name='Calculadora' component={Calculadora} options={{
+           drawerIcon:({focused,color,size}) => (
+            <Icon name='calculator' size={25} color={color}/>
+          ),
             headerTransparent: true,
             headerTitleStyle:{
               color:'transparent',

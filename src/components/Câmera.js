@@ -20,13 +20,6 @@ export default function App() {
       setHasMediaLibraryPermission(mediaLibraryPermission.status === "granted");
     })();
   }, []);
-
-  if (hasCameraPermission === undefined) {
-    return <Text>Requesting permissions...</Text>
-  } else if (!hasCameraPermission) {
-    return <Text>Permission for camera not granted. Please change this in settings.</Text>
-  }
-
   let takePic = async () => {
     let options = {
       quality: 1,
@@ -67,6 +60,16 @@ export default function App() {
     <Camera style={styles.container} ref={cameraRef}>
       <View style={styles.buttonContainer}>
         <Button color="black"  title="Tirar Foto" onPress={takePic} />
+        <Button color="black"
+            title="Modo Selfie"
+            onPress={() => {
+              setType(
+                type === Camera.Constants.Type.back
+                  ? Camera.Constants.Type.front
+                  : Camera.Constants.Type.back
+              );
+            }}>
+     </Button>
       </View>
       <StatusBar style="auto" />
     </Camera>
