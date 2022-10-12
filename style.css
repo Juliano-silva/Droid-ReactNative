@@ -1,5 +1,8 @@
 body{
-text-align: center;
-height: 200px;
-background: rgb(11, 11, 78);
+    font-style: italic;
+    border: 2px solid purple;
+    color: white;
+    width: 80%;
+    border-radius: 20px;
+    margin: auto;
 }

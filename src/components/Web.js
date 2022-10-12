@@ -10,7 +10,7 @@ export default function Web(){
             <WebBackground source={require('../../assets/Arquivos/12.jpg')}>
             <CorpoWeb>
                 <TextWeb>Coloque a url do site</TextWeb>
-                <InputWeb onChangeText={text => setUrl(text)} value={url} placeholder="Coloque a url do site"/>
+                <InputWeb placeholderTextColor="#fff" onChangeText={text => setUrl(text)} value={url} placeholder="Coloque a url do site"/>
                 <Enviar>
                     <BotWeb onPress={() => setGo(true)}>Iniciar</BotWeb>
                 </Enviar>
@@ -21,7 +21,7 @@ export default function Web(){
         return(
             <>
             <WebView source={{uri:url}}/>
-            <TextInput onChangeText={text => setUrl(text)} value={url} placeholder="Coloque aqui a url do site"/>
+            <TextInput  onChangeText={text => setUrl(text)} value={url} placeholder="Coloque aqui a url do site"/>
                 <View>
                     <Button onPress={() => setGo(true)} title="Iniciar"/>
                 </View>

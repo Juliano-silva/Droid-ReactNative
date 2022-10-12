@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { createDrawerNavigator, DrawerContent } from '@react-navigation/drawer'
+import { createDrawerNavigator, DrawerContent, DrawerItem } from '@react-navigation/drawer'
 import { NavigationContainer } from '@react-navigation/native'
 import { SafeAreaView,StyleSheet } from 'react-native'
 // Antigas
@@ -18,15 +18,13 @@ import Portfolio from '../components/Portfolio'
 // Novas
 import Calculadora from '../components/Calculadora'
 import Loja from '../components/Loja'
-import Music from '../components/Music'
-import Login from '../components/Login'
+import Email from '../components/Email'
 import Mapa from '../components/Mapa'
 import Mural from '../components/Mural'
-import Radio from '../components/Radio'
+import Falar from '../components/Falar'
 import ApiExterna from '../components/ApiExterna'
-import Senha from '../components/GeradorSenha'
 import BichVirtu from '../components/BichVirtu'
-import Animação from '../components/Animação'
+import Config from '../components/Config'
 const Drawer = createDrawerNavigator();
 import Icon from 'react-native-vector-icons/FontAwesome'
 import GeradorSenha from '../components/GeradorSenha'
@@ -35,8 +33,10 @@ export default function Sidebar(){
       <NavigationContainer>
       <Drawer.Navigator style={Styles.Drawer} 
       screenOptions={{
+        headerTintColor: "#fff",
         drawerStyle:{
-          backgroundColor:"rgb(11, 11, 78)",
+          backgroundColor:"black",
+          opacity:0.8
         },
         drawerLabelStyle:{
           color:"white"
@@ -143,23 +143,79 @@ export default function Sidebar(){
             color:'transparent',
             fontSize:50,
           }}} component={Portfolio}/>
-        <Drawer.Screen name='Calculadora' component={Calculadora}/>
-        <Drawer.Screen name='Loja' component={Loja}/>
-        <Drawer.Screen name='Mural' component={Mural}/>
-        <Drawer.Screen name='Music' component={Music}/>
-        <Drawer.Screen name='Login' component={Login}/>
-        <Drawer.Screen name='Mapa' component={Mapa}/>
-        <Drawer.Screen name='ApiExterna' component={ApiExterna}/>
-        <Drawer.Screen name='Animação' component={Animação}/>
-        <Drawer.Screen name='Radio' component={Radio}/>
-        <Drawer.Screen name='Senha' component={GeradorSenha}/>
-        <Drawer.Screen name='Bichinho Virtual' component={BichVirtu}/>
+        <Drawer.Screen name='Calculadora' component={Calculadora} options={{
+            headerTransparent: true,
+            headerTitleStyle:{
+              color:'transparent',
+              fontSize:50
+            }
+        }}/>
+        <Drawer.Screen name='Gmail' component={Email} options={{
+            headerTransparent: true,
+            headerTitleStyle:{
+              color:'transparent',
+              fontSize:50
+            }
+        }}/>
+        <Drawer.Screen name='Mural' component={Mural} options={{
+            headerTransparent: true,
+            headerTitleStyle:{
+              color:'transparent',
+              fontSize:50
+            }
+        }}/>
+        <Drawer.Screen name='Mapa' component={Mapa} options={{
+            headerTransparent: true,
+            headerTitleStyle:{
+              color:'transparent',
+              fontSize:50
+            }
+        }}/>
+        <Drawer.Screen name='ApiExterna' component={ApiExterna} options={{
+            headerTransparent: true,
+            headerTitleStyle:{
+              color:'transparent',
+              fontSize:50
+            }
+        }}/>
+        <Drawer.Screen name='Config' component={Config} options={{
+            headerTransparent: true,
+            headerTitleStyle:{
+              color:'transparent',
+              fontSize:50
+            }
+        }}/>
+        <Drawer.Screen name='Falar' component={Falar} options={{
+            headerTransparent: true,
+            headerTitleStyle:{
+              color:'transparent',
+              fontSize:50
+            }
+        }}/>
+        <Drawer.Screen name='Loja' component={Loja} options={{
+            headerTransparent: true,
+            headerTitleStyle:{
+              color:'transparent',
+              fontSize:50
+            }
+        }}/>
+        <Drawer.Screen name='Senha' component={GeradorSenha} options={{
+            headerTransparent: true,
+            headerTitleStyle:{
+              color:'transparent',
+              fontSize:50
+            }
+        }}/>
+        <Drawer.Screen name='Bichinho Virtual' options={{
+            headerTransparent: true,
+            headerTitleStyle:{
+              color:'transparent',
+              fontSize:50
+            }
+        }} component={BichVirtu}/>
       </Drawer.Navigator>
       </NavigationContainer>
   )
 }
 const Styles = StyleSheet.create({
-  Drawer:{
-    color:"red"
-  }
 })

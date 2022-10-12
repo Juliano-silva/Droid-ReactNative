@@ -3,23 +3,25 @@ export const CaleImg = styled.ImageBackground`
 height: 100%;
 `
 export const Data = styled.Text`
-color: aqua;
+color: purple;
 font-size: 60px;
 text-align: center;
-text-shadow: 2px 2px 2px blue;
+text-shadow: 2px 2px 6px aqua;
 `
 export const DataTex = styled.Text`
 color: aqua;
 font-size: 40px;
 text-align: center;
-text-shadow: 2px 2px 2px purple;
-margin-top: -15px;
+text-shadow: 6px 6px 4px purple;
+margin-top: -10px;
+font-style: italic;
 `
 export const InputData = styled.Text`
 color: aqua;
-font-size: 20px;
+font-size: 25px;
 text-align: center;
-text-shadow: 2px 2px 2px blue;
+text-shadow: 6px 6px 4px purple;
+margin-top: 5px;
 `
 export const CorpoCale = styled.View`
 text-shadow: 2px 2px 2px blue;

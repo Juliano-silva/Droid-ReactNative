@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { StyleSheet,View,Button,TouchableOpacity,Text } from 'react-native';
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 import {Cores} from './Styles/StyleCores'
 export default class Color extends Component {
   constructor(){
@@ -20,7 +21,7 @@ this.setState({
   render() {
     return (
       <View style={[styles.MainContainer, { backgroundColor: this.state.ColorHolder }]} >
-        <TouchableOpacity onPress={this.ChangeColorFunction}><Cores>{this.state.ColorHolder}</Cores></TouchableOpacity>
+        <TouchableOpacity onPress={this.ChangeColorFunction}><Cores style={styles.Cores}>{this.state.ColorHolder}</Cores></TouchableOpacity>
       </View>
  
     );
@@ -33,6 +34,9 @@ const styles = StyleSheet.create(
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  Cores:{
+    fontSize:wp("10%")
   }
  
 });

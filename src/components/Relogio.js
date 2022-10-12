@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import {View, Text, ImageBackground} from 'react-native';
+import {View, Text, ImageBackground,StyleSheet} from 'react-native';
 import {Hora,CorpoRelo,ImgRelogio} from './Styles/StyleRelogio'
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 export default class Relogio extends Component {
 
   constructor() {
@@ -31,9 +32,14 @@ export default class Relogio extends Component {
     return (
       <ImgRelogio source={require('../../assets/Arquivos/21.jpg')}>
       <CorpoRelo>
-          <Hora>{this.state.currentTime}</Hora>
+          <Hora style={styles.Hora}>{this.state.currentTime}</Hora>
       </CorpoRelo>
       </ImgRelogio>
     );
   }
 }
+const styles = StyleSheet.create({
+  Hora:{
+    fontSize:wp("20%")
+  }
+})
