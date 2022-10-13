@@ -1,36 +1,47 @@
-import React from 'react'
-import { StyleSheet, Button, View,ImageBackground } from 'react-native'
+import React,{useState,useEffect} from 'react'
+import { StyleSheet, Buttone, View,ImageBackground,TextInput,Text } from 'react-native'
 import email from 'react-native-email'
+import {ButtoEmail,EmailBk,CorpoEmail,InputEmail} from './Styles/StyleEmail'
 
 export default class App extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {to: ''};
+        this.state = {para: ''};
+        this.state = {text: ''};
+        this.state = {textao: ''};
+      }
     render() {
         return (
-            <ImageBackground  source={require('../../assets/Arquivos/1.jpg')}>
-            <View style={styles.container}>
-                <Button title="Send Mail" onPress={this.handleEmail} />
-            </View>
-            </ImageBackground>
+            <EmailBk source={require('../../assets/Arquivos/1.jpg')}>
+            <CorpoEmail>
+                <InputEmail placeholder='Digite o to' onChangeText={(to) => this.setState({to})} value={this.state.to}/>
+                <InputEmail placeholder='Digite Para quem você quer enviar' onChangeText={(para) => this.setState({para})} value={this.state.para}/>
+                <InputEmail placeholder='Texto Principal' onChangeText={(text) => this.setState({text})} value={this.state.text}/>
+                <InputEmail placeholder='Texto' onChangeText={(textao) => this.setState({textao})} value={this.state.textao}/>
+                <ButtoEmail onPress={this.handleEmail}>
+                    Gmail
+                </ButtoEmail>
+            </CorpoEmail>
+            </EmailBk>
         )
     }
 
     handleEmail = () => {
-        const to = ['tiaan@email.com', 'foo@bar.com']
+        // Eu
+        const to = [this.state.to]
         email(to, {
-            cc: ['bazzy@moo.com', 'doooo@daaa.com'], 
-            bcc: 'mee@mee.com', 
-            subject: 'Show how to use',
-            body: 'Some body right here',
+            // Para
+            cc: [this.state.para], 
+            // Principal Texto
+            subject: this.state.text,
+            // Texto
+            body: this.state.textao,
             checkCanOpen: false
         }).catch(console.error)
     }
 }
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor:'red',
-        marginTop:800,
-        alignItems: 'center',
-        justifyContent: 'center'
-    }
+
 })

@@ -7,7 +7,7 @@ export const CorpoWeb = styled.View`
 width: 350px;
 margin: auto;
 border: 2px solid transparent;
-background:gray;
+background:#121212;
 height: 150px;
 opacity: 0.9;
 border-radius: 20px;
@@ -41,7 +41,7 @@ text-align: center;
 font-style: italic;
 font-weight: bold;
 color: purple;
-text-shadow: 2px 4px 6px black;
+text-shadow: 1px 1px 6px yellow;
 font-size: 30px;
 margin-top: -1px;
 `

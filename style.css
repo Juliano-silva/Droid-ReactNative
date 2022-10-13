@@ -1,7 +1,14 @@
 body{
-margin: auto;
-background: #121212;
-border-radius: 40px;
-width: 90%;
+background: rgb(80, 10, 80);
+font-family: 'Inter-Black';
+background: rgb(153, 255, 0);
+border: 2px solid white;
 margin-top: 20px;
+border: 2px solid cadetblue;
+width: 80%;
+margin: auto;
+text-align: center;
+color: white;
+border-radius: 20px;
+background: rgb(43, 75, 77);
 }

@@ -12,26 +12,24 @@ margin-top: 14px;
 border-radius: 50px;
 `
 export const CorpoApi =styled.View`
-background: purple;
+background: rgb(59, 5, 59);
+opacity: 0.9;
 border: 2px solid yellow;
-width: 80%;
+width: 100%;
 text-align: center;
 margin: auto;
 margin-top: 25px;
-height: 50px;
-border-radius: 20px;
+border-radius: 10px;
 `
 export const ItemAPi =styled.Text`
-font-size: 25px;
+font-size: 30px;
 text-shadow: 4px 4px 2px rgb(78, 14, 78);
-color: greenyellow;
+color: rgb(153, 255, 0);
 width: 90%;
 margin: auto;
-text-align: center;
 `
-export const ButtonApi = styled.Text`
-text-align: right;
-margin-top: -25px;
+export const ButtonApi = styled.Text`text-align: center;
+margin-top: 5px;
 `
 export const BlocoInput = styled.TextInput`
 text-align: center;

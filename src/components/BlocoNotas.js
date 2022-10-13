@@ -55,9 +55,9 @@ export default function BlocoNotas() {
         behavior="padding"
         enabled={Platform.OS === "ios"}
       >
+      <BlocoBK source={require("../../assets/Arquivos/15.jpg")}>
       <ScrollView>
         <View >
-        <BlocoBK source={require("../../assets/Arquivos/15.jpg")}>
           <CorpoNotas style={styles.CorpoNotas}>
             <FlatList
               data={task2}
@@ -65,17 +65,15 @@ export default function BlocoNotas() {
               showsVerticalScrollIndicator={false}
               renderItem={({ item }) => (
                 <ViewApi>
+                  <CorpoApi>
                   <ScrollView>
-                  <CorpoApi><ItemAPi >{item}
                   <ButtonApi onPress={() => removeTask(item)}>
-                    <MaterialIcons
-                      name="delete-forever"
-                      size={40}
-                      color="greenyellow"
-                    />
+                    <ItemAPi >
+                      {item}
+                  </ItemAPi>
                   </ButtonApi>
-                  </ItemAPi></CorpoApi>
                   </ScrollView>
+                  </CorpoApi>
                 </ViewApi>
               )}
             />
@@ -88,18 +86,19 @@ export default function BlocoNotas() {
               </Adicionar>
             </TouchableOpacity>
           </View>
-          </BlocoBK>
         </View>
         </ScrollView>
+        </BlocoBK>
       </KeyboardAvoidingView>
     </>
   );
 }
 const styles = StyleSheet.create({
   Inputs:{
-    marginTop: wp("2%")
+    marginTop: wp("10%")
   },
   CorpoNotas:{
-    height: wp("160%")
+    height: wp("140%"),
+    marginTop:wp('10%')
   }
 })
