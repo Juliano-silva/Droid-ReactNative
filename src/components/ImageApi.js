@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Ionicons, MaterialIcons } from "@expo/vector-icons";
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {Text,StyleSheet,Image,View,TextInput,TouchableOpacity,FlatList,ScrollView,Keyboard,Alert,KeyboardAvoidingView,Platform,ImageBackground} from "react-native";
-import {ImageApiBackground,Img,IconeImg,InputImg,Apagar,Remover} from './Styles/StyleImageApi'
+import {ImageApiBackground,Img,IconeImg,InputImg,Apagar,Adicionar,Remover} from './Styles/StyleImageApi'
 export default function ImageApi() {
   const [task, setTask] = useState([]);
   const [newTask, setNewTask] = useState("");
@@ -81,7 +81,7 @@ export default function ImageApi() {
               onChangeText={text => setNewTask(text)}
             />
             <IconeImg onPress={() => addTask()}>
-              <Ionicons name="ios-add" size={50} color="white" />
+              <Adicionar>Adicionar</Adicionar>
             </IconeImg>
           </View>
           </ScrollView>

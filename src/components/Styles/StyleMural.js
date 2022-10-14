@@ -2,8 +2,6 @@ import styled from "styled-components";
 export const MuralBk = styled.ImageBackground`
 height: 100%;`
 export const CorpoMural = styled.View`
-
-opacity: 0.8;
 `
 export const ButtonMural = styled.Text`
 border-radius: 20px;
@@ -21,5 +19,6 @@ export const ImageMural = styled.Image`
 opacity: 1;
 width: 100%;
 height: 50%;
+margin: auto;
 margin-top: 80px;
 `

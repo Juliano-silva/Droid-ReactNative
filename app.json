@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "Droid",
-    "slug": "Droid",
+    "name": "Reborn",
+    "slug": "Reborn",
     "version": "1.5.5",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -9,7 +9,7 @@
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#000"
+      "backgroundColor": "#19171C"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -23,7 +23,7 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#000"
+        "backgroundColor": "#19171C"
       },
       "package": "com.julianoalmeida.app"
     },

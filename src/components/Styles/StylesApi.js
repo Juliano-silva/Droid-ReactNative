@@ -18,7 +18,7 @@ border: 2px solid yellow;
 width: 100%;
 text-align: center;
 margin: auto;
-margin-top: 25px;
+margin-top: 30px;
 border-radius: 10px;
 `
 export const ItemAPi =styled.Text`

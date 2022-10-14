@@ -36,11 +36,11 @@ export default function Sidebar(){
         headerTintColor: "#fff",
         drawerStyle:{
           backgroundColor:"black",
-          opacity:0.8
+          opacity:0.9
         },
         drawerLabelStyle:{
-          color:"red",
-          fontSize:20,
+          color:"rgb(230, 226, 226)",
+          fontSize:15,
           fontFamily:'Inter-Black',
         }
         }}>
@@ -53,7 +53,7 @@ export default function Sidebar(){
           color:'transparent',
         }
       }} component={BlocoNotas}/>
-        <Drawer.Screen name='Api de Imagem' options={{
+        <Drawer.Screen name='Bloco de Imagem' options={{
         drawerIcon:() => (
           <Icon name='image' size={25} color={"yellow"}/>
         ),
@@ -112,7 +112,7 @@ export default function Sidebar(){
           headerTitleStyle:{
             color:'transparent',
           }}} component={Relogio}/>
-        <Drawer.Screen name='Contador e Timer' options={{
+        <Drawer.Screen name='Contador/Timer' options={{
           drawerIcon:() => (
             <Icon name='plus' size={25} color={"yellow"}/>
           ),           headerTransparent: true,
@@ -158,6 +158,9 @@ export default function Sidebar(){
             }
         }}/>
         <Drawer.Screen name='Mural' component={Mural} options={{
+           drawerIcon:() => (
+            <Icon name='google-wallet' size={25} color={'yellow'}/>
+          ),
             headerTransparent: true,
             headerTitleStyle:{
               color:'transparent',
@@ -172,7 +175,7 @@ export default function Sidebar(){
               color:'transparent',
             }
         }}/>
-        <Drawer.Screen name='ApiExterna' component={ApiExterna} options={{
+        <Drawer.Screen name='pokedex' component={ApiExterna} options={{
            drawerIcon:({focused,color,size}) => (
             <Icon name='optin-monster' size={25} color={'yellow'}/>
           ),
@@ -181,7 +184,7 @@ export default function Sidebar(){
               color:'transparent',
             }
         }}/>
-        <Drawer.Screen name='Config' component={Config} options={{
+        <Drawer.Screen name='Configuração' component={Config} options={{
            drawerIcon:({focused,color,size}) => (
             <Icon name='gear' size={25} color={'yellow'}/>
           ),
@@ -190,7 +193,7 @@ export default function Sidebar(){
               color:'transparent',
             }
         }}/>
-        <Drawer.Screen name='Falar' component={Falar} options={{
+        <Drawer.Screen name='Narrador' component={Falar} options={{
           drawerIcon:({focused,color,size}) => (
             <Icon name='podcast' size={25} color={'yellow'}/>
           ),
@@ -200,18 +203,27 @@ export default function Sidebar(){
             }
         }}/>
         <Drawer.Screen name='Loja' component={Loja} options={{
+           drawerIcon:({focused,color,size}) => (
+            <Icon name='shopping-cart' size={25} color={'yellow'}/>
+          ),
             headerTransparent: true,
             headerTitleStyle:{
               color:'transparent',
             }
         }}/>
-        <Drawer.Screen name='Senha' component={GeradorSenha} options={{
+        <Drawer.Screen name='Gerador de senha' component={GeradorSenha} options={{
+          drawerIcon:() => (
+            <Icon name='key' size={25} color={'yellow'}/>
+          ),
             headerTransparent: true,
             headerTitleStyle:{
               color:'transparent',
             }
         }}/>
-        <Drawer.Screen name='Bichinho Virtual' options={{
+        <Drawer.Screen name='Space' options={{
+          drawerIcon:() => (
+            <Icon name='space-shuttle' size={25} color={'yellow'}/>
+          ),
             headerTransparent: true,
             headerTitleStyle:{
               color:'transparent',

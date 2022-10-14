@@ -10,12 +10,15 @@ opacity: 0.9;
 `
 export const BotaoFla = styled.Text`
 text-transform: uppercase;
-font-size: 23px;
+border: 2px solid silver;
+background:silver;
+font-size: 18px;
+width: 80%;
 text-align: center;
 color: yellow;
-text-shadow: 4px 4px 2px blue;
-width: 100%;
+text-shadow: 2px 2px 2px blue;
 margin: auto;
+margin-top: 15px;
 border-radius: 20px;
 `
 export const InputFalar = styled.TextInput`
@@ -31,7 +34,7 @@ border-radius: 40px;
 `
 export const CorpoFalarView = styled.View`
 margin: auto;
-background: #121212
+background: #121212;
 margin-top: 5px;
 border-radius: 40px;
 width: 90%;

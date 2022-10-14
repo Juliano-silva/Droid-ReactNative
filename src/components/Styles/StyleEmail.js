@@ -14,7 +14,7 @@ export const EmailBk = styled.ImageBackground`
 height:100%;
 `
 export const CorpoEmail = styled.View`
-margin-top: 70px;
+margin-top: 150px;
 `
 export const InputEmail = styled.TextInput`
 border-radius: 20px;
@@ -22,7 +22,7 @@ background: rgb(43, 75, 77);
 border: 2px solid cadetblue;
 width: 80%;
 margin: auto;
-margin-top: 65px;
+margin-top: 25px;
 text-align: center;
 color: white;
 `

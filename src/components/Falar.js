@@ -39,7 +39,7 @@ export default function Falar(){
     <FalarCorpo>
         <InputFalar placeholderTextColor="blue" onChangeText={e => setText(e)} placeholder="Digite Algo"/>
         <CorpoFalarView>
-        <BotaoFla onPress={Falar}>Falando em Brasileiro</BotaoFla>
+        <BotaoFla onPress={Falar}>Falando em Português</BotaoFla>
         <BotaoFla onPress={FalarIngles}>Falando em Inglês</BotaoFla>
         <BotaoFla onPress={FalarItaliano}>Falar em Italiano</BotaoFla>
         <BotaoFla onPress={FalarJapao}>Falando em Japones</BotaoFla>

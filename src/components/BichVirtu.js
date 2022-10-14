@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-import { StyleSheet, View, Text, PanResponder, Animated,  } from "react-native";
-
+import { StyleSheet, View,ImageBackground, Text, PanResponder, Animated,  } from "react-native";
+import {BichBk,Row,CorpoVirtu,Nome} from './Styles/StyleBichVirtu'
+import { LinearGradient } from 'expo-linear-gradient';
 class Draggable extends Component {
   constructor(props) {
     super(props);
@@ -9,7 +10,6 @@ class Draggable extends Component {
       showDraggable: true,
       dropAreaValues: null,
       pan: new Animated.ValueXY(),
-      opacity: new Animated.Value(1)
     };
   }
 
@@ -29,28 +29,14 @@ class Draggable extends Component {
         onPanResponderMove: Animated.event([ 
           null, { dx: this.state.pan.x, dy: this.state.pan.y }
         ]),
-        onPanResponderRelease: (e, gesture) => {
-          if (this.isDropArea(gesture)) {
-            Animated.timing(this.state.opacity, {
-              toValue: 0,
-              duration: 1000
-            }).start(() =>
-              this.setState({
-                showDraggable: false
-              })
-            );
-          } 
-        }
+       
       });
   }
 
-  isDropArea(gesture) {
-    return gesture.moveY < 200;
-  }
-
+ 
   render() {
     return (
-      <View style={{ width: "20%", alignItems: "center" }}>
+      <View>
         {this.renderDraggable()}
       </View>
     );
@@ -63,10 +49,15 @@ class Draggable extends Component {
     if (this.state.showDraggable) {
       return (
         <View style={{ position: "absolute" }}>
-          <Animated.View
+          <Animated.View 
             {...this.panResponder.panHandlers}
-            style={[panStyle, styles.circle, {opacity:this.state.opacity}]}
-          />
+            style={[panStyle]}
+          >
+        <LinearGradient colors={['#4158D0','#C850C0','#FFCC70']}
+        style={styles.circle}>
+          <Nome>J</Nome>
+        </LinearGradient>
+          </Animated.View>
         </View>
       );
     }
@@ -78,48 +69,36 @@ export default class App extends Component {
   render() {
     return (
       <View style={styles.mainContainer}>
-        <View style={styles.dropZone}>
-          <Text style={styles.text}>Drop them here!</Text>
-        </View>
-        <View style={styles.ballContainer} />
-        <View style={styles.row}>
+        <BichBk source={require("../../assets/Arquivos/22.jpg")}>
+        <View/>
+        <CorpoVirtu>
           <Draggable />
           <Draggable />
           <Draggable />
-        </View>
+          <Draggable />
+          <Draggable />
+          <Draggable />
+          <Draggable />
+          <Draggable />
+          <Draggable />
+        </CorpoVirtu>
+        </BichBk>
       </View>
     );
   }
 }
 
-let CIRCLE_RADIUS = 30;
 const styles = StyleSheet.create({
   mainContainer: {
-    flex: 1
+    flex: 1,
   },
   ballContainer: {
-    height:200
+    height:350
   },
   circle: {
-    backgroundColor: "skyblue",
-    width: CIRCLE_RADIUS * 2,
-    height: CIRCLE_RADIUS * 2,
-    borderRadius: CIRCLE_RADIUS
+    opacity: 1,
+    width:  65,
+    height: 65,
+    borderRadius: 50
   },
-  row: {
-    flexDirection: "row"
-  },  
-  dropZone: {
-    height: 200,
-    backgroundColor: "#00334d"
-  },
-  text: {
-    marginTop: 25,
-    marginLeft: 5,
-    marginRight: 5,
-    textAlign: "center",
-    color: "#fff",
-    fontSize: 25,
-    fontWeight: "bold"
-  }
 });

@@ -4,13 +4,14 @@ height: 100%;
 `
 export const Img = styled.Image`
 width: 100%;
-height: 700px;
-margin-top: 10px;
-
+height: 600px;
+margin: auto;
+opacity: 0.9;
+background: rgb(61, 60, 60);
 `
 export const InputImg = styled.TextInput`
-border: 2px solid slateblue;
-background: slategrey;
+border: 2px solid slategrey;
+background: slateblue;
 color: white;
 text-align: center;
 width: 85%;
@@ -20,18 +21,24 @@ font-size: 30px;
 border-radius: 20px;
 `
 export const IconeImg = styled.TouchableOpacity`
-border: 2px solid slategrey;
+
+`
+export const Adicionar = styled.Text`
+border: 3px solid slategrey;
 background: steelblue;
-color: rebeccapurple;
+color: white;
 text-shadow: 4px 4px 2px slateblue;
 text-align: center;
 margin: auto;
 margin-top: 20px;
-width: 50px;
 border-radius: 50px;
+width: 60%;
+font-size: 30px;
 `
 export const Remover = styled.Text`
-font-size: 30px;
+font-size: 40px;
+width: 100%;
+margin: auto;
 text-align: center;
 background: slategray;
 color: slateblue;
