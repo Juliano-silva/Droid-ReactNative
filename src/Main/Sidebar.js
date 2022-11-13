@@ -28,10 +28,20 @@ import Config from '../components/Config'
 const Drawer = createDrawerNavigator();
 import Icon from 'react-native-vector-icons/FontAwesome'
 import GeradorSenha from '../components/GeradorSenha'
+// Novos de Novo
+import AudioMeme from '../components/AudioMeme'
+import Telefonica from '../components/Telefonica'
+import Tradutor from '../components/Tradutor'
+import WaveButton from '../components/WaveButton'
+import GravadorV from '../components/GravadorVídeo'
+import GeradorPDF from '../components/GeradorPDF'
+import Gradient from '../components/Gradient'
+import Carrossel from '../components/Carrossel'
+import Imc from '../components/Imc'
 export default function Sidebar(){
   return(
       <NavigationContainer>
-      <Drawer.Navigator style={Styles.Drawer} 
+      <Drawer.Navigator style={Styles.Drawer}
       screenOptions={{
         headerTintColor: "#fff",
         drawerStyle:{
@@ -229,6 +239,87 @@ export default function Sidebar(){
               color:'transparent',
             }
         }} component={BichVirtu}/>
+         <Drawer.Screen name='AudioMeme' component={AudioMeme} options={{
+          drawerIcon:() => (
+            <Icon name='key' size={25} color={'yellow'}/>
+          ),
+            headerTransparent: true,
+            headerTitleStyle:{
+              color:'transparent',
+            }
+        }}/>
+         <Drawer.Screen name='Imc' component={Imc} options={{
+          drawerIcon:() => (
+            <Icon name='key' size={25} color={'yellow'}/>
+          ),
+            headerTransparent: true,
+            headerTitleStyle:{
+              color:'transparent',
+            }
+        }}/>
+        <Drawer.Screen name='Carrossel' component={Carrossel} options={{
+          drawerIcon:() => (
+            <Icon name='key' size={25} color={'yellow'}/>
+          ),
+            headerTransparent: true,
+            headerTitleStyle:{
+              color:'transparent',
+            }
+        }}/>
+        <Drawer.Screen name='WaveButton' component={WaveButton} options={{
+          drawerIcon:() => (
+            <Icon name='key' size={25} color={'yellow'}/>
+          ),
+            headerTransparent: true,
+            headerTitleStyle:{
+              color:'transparent',
+            }
+        }}/>
+        <Drawer.Screen name='Tradutor' component={Tradutor} options={{
+          drawerIcon:() => (
+            <Icon name='key' size={25} color={'yellow'}/>
+          ),
+            headerTransparent: true,
+            headerTitleStyle:{
+              color:'transparent',
+            }
+        }}/>
+        <Drawer.Screen name='GeradorPDF' component={GeradorPDF} options={{
+          drawerIcon:() => (
+            <Icon name='key' size={25} color={'yellow'}/>
+          ),
+            headerTransparent: true,
+            headerTitleStyle:{
+              color:'transparent',
+            }
+        }}/>
+        <Drawer.Screen name='GravadorVídeo' component={GravadorV} options={{
+          drawerIcon:() => (
+            <Icon name='key' size={25} color={'yellow'}/>
+          ),
+            headerTransparent: true,
+            headerTitleStyle:{
+              color:'transparent',
+            }
+        }}/>
+        <Drawer.Screen name='Gradient' component={Gradient} options={{
+          drawerIcon:() => (
+            <Icon name='key' size={25} color={'yellow'}/>
+          ),
+            headerTransparent: true,
+            headerTitleStyle:{
+              color:'transparent',
+            }
+        }}/>
+        <Drawer.Screen name='Telefonica' component={Telefonica} options={{
+          drawerIcon:() => (
+            <Icon name='key' size={25} color={'yellow'}/>
+          ),
+            headerTransparent: true,
+            headerTitleStyle:{
+              color:'transparent',
+            }
+        }}/>
       </Drawer.Navigator>
       </NavigationContainer>
   )

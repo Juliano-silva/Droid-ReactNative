@@ -23,3 +23,13 @@ text-transform: uppercase;
 `
 export const PokeBk = styled.ImageBackground`
 `
+export const PokePesquisa = styled.TextInput`
+border: 2px solid red;
+background: purple;
+text-align: center;
+width: 80%;
+margin: auto;
+margin-top: 200px;
+border-radius: 20px;
+color: white;
+`
