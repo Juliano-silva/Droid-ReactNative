@@ -65,7 +65,7 @@ export default function Sidebar(){
       }} component={BlocoNotas}/>
         <Drawer.Screen name='Bloco de Imagem' options={{
         drawerIcon:() => (
-          <Icon name='image' size={25} color={"yellow"}/>
+          <Icon name='file-picture-o' size={25} color={"yellow"}/>
         ),
         headerTransparent: true,
         headerTitleStyle:{
@@ -241,7 +241,7 @@ export default function Sidebar(){
         }} component={BichVirtu}/>
          <Drawer.Screen name='AudioMeme' component={AudioMeme} options={{
           drawerIcon:() => (
-            <Icon name='key' size={25} color={'yellow'}/>
+            <Icon name='file-sound-o' size={25} color={'yellow'}/>
           ),
             headerTransparent: true,
             headerTitleStyle:{
@@ -250,7 +250,7 @@ export default function Sidebar(){
         }}/>
          <Drawer.Screen name='Imc' component={Imc} options={{
           drawerIcon:() => (
-            <Icon name='key' size={25} color={'yellow'}/>
+            <Icon name='coffee' size={25} color={'yellow'}/>
           ),
             headerTransparent: true,
             headerTitleStyle:{
@@ -259,7 +259,7 @@ export default function Sidebar(){
         }}/>
         <Drawer.Screen name='Carrossel' component={Carrossel} options={{
           drawerIcon:() => (
-            <Icon name='key' size={25} color={'yellow'}/>
+            <Icon name='image' size={25} color={'yellow'}/>
           ),
             headerTransparent: true,
             headerTitleStyle:{
@@ -268,7 +268,7 @@ export default function Sidebar(){
         }}/>
         <Drawer.Screen name='WaveButton' component={WaveButton} options={{
           drawerIcon:() => (
-            <Icon name='key' size={25} color={'yellow'}/>
+            <Icon name='magic' size={25} color={'yellow'}/>
           ),
             headerTransparent: true,
             headerTitleStyle:{
@@ -277,7 +277,7 @@ export default function Sidebar(){
         }}/>
         <Drawer.Screen name='Tradutor' component={Tradutor} options={{
           drawerIcon:() => (
-            <Icon name='key' size={25} color={'yellow'}/>
+            <Icon name='send' size={25} color={'yellow'}/>
           ),
             headerTransparent: true,
             headerTitleStyle:{
@@ -286,7 +286,7 @@ export default function Sidebar(){
         }}/>
         <Drawer.Screen name='GeradorPDF' component={GeradorPDF} options={{
           drawerIcon:() => (
-            <Icon name='key' size={25} color={'yellow'}/>
+            <Icon name='file-pdf-o' size={25} color={'yellow'}/>
           ),
             headerTransparent: true,
             headerTitleStyle:{
@@ -295,7 +295,7 @@ export default function Sidebar(){
         }}/>
         <Drawer.Screen name='GravadorVídeo' component={GravadorV} options={{
           drawerIcon:() => (
-            <Icon name='key' size={25} color={'yellow'}/>
+            <Icon name='video-camera' size={25} color={'yellow'}/>
           ),
             headerTransparent: true,
             headerTitleStyle:{
@@ -304,7 +304,7 @@ export default function Sidebar(){
         }}/>
         <Drawer.Screen name='Gradient' component={Gradient} options={{
           drawerIcon:() => (
-            <Icon name='key' size={25} color={'yellow'}/>
+            <Icon name='qq' size={25} color={'yellow'}/>
           ),
             headerTransparent: true,
             headerTitleStyle:{
@@ -313,7 +313,7 @@ export default function Sidebar(){
         }}/>
         <Drawer.Screen name='Telefonica' component={Telefonica} options={{
           drawerIcon:() => (
-            <Icon name='key' size={25} color={'yellow'}/>
+            <Icon name='phone-square' size={25} color={'yellow'}/>
           ),
             headerTransparent: true,
             headerTitleStyle:{
