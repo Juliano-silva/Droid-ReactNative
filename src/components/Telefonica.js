@@ -1,5 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, SafeAreaView, ScrollView } from 'react-native';
+import { StyleSheet, Text, View, SafeAreaView, ScrollView,ImageBackground } from 'react-native';
+import {TelefonicaBk,NameText,NumText,CorpoTele} from './Styles/StyleTelefonica'
 import * as Contacts from 'expo-contacts';
 import { useEffect, useState } from 'react';
 
@@ -17,11 +18,7 @@ export default function Telefonica() {
 
         if (data.length > 0) {
           setContacts(data);
-        } else {
-          setError("No contacts found");
         }
-      } else {
-        setError("Permission to access contacts denied.");
       }
     })();
   }, []);
@@ -42,38 +39,25 @@ export default function Telefonica() {
     if (contacts !== undefined) {
       return contacts.map((contact, index) => {
         return (
-          <View key={index} style={styles.contact}>
-            <Text>Name: {contact.firstName} {contact.lastName}</Text>
-            {contact.birthday ? <Text>Birthday: {contact.birthday.month}/{contact.birthday.day}/{contact.birthday.year}</Text> : undefined}
+          <CorpoTele>
+            <NameText>Nome: {contact.firstName} {contact.lastName}</NameText>
+            <NumText>
             {getContactData(contact.phoneNumbers, "number")}
+            </NumText>
             {getContactData(contact.emails, "email")}
-          </View>
+          </CorpoTele>
         );
       });
-    } else {
-      return <Text>Awaiting contacts...</Text>
     }
   }
 
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView >
+      <TelefonicaBk source={require("../../assets/Arquivos/24.jpg")}>
       <ScrollView>
         {getContactRows()}
       </ScrollView>
-      <Text>{error}</Text>
-      <StatusBar style="auto" />
+      </TelefonicaBk>
     </SafeAreaView>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  contact: {
-    marginVertical: 8
-  }
-});

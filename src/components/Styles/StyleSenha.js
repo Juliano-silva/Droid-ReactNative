@@ -8,7 +8,7 @@ margin: auto;
 margin-top: 50%;
 opacity: 0.8;
 border-radius: 10px;
-height: 350px;
+height: 35 0px;
 `
 export const GerarS = styled.Text`
 color: snow;

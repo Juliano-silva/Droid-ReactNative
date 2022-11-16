@@ -1,11 +1,12 @@
 import React, { useState } from "react";
-import { Text, View, StyleSheet, TouchableNativeFeedback, StatusBar } from "react-native";
-
+import { Text, View, StyleSheet, TouchableNativeFeedback, StatusBar,ImageBackground } from "react-native";
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 const App = () => {
   const [rippleColor, setRippleColor] = useState(randomHexColor());
   const [rippleOverflow, setRippleOverflow] = useState(false);
   return (
-    <View style={styles.container}>
+    <ImageBackground style={styles.Background} source={require("../../assets/Arquivos/23.jpg")}>
+    <View>
       <TouchableNativeFeedback
         onPress={() => {
           setRippleColor(randomHexColor());
@@ -17,9 +18,10 @@ const App = () => {
         </View>
       </TouchableNativeFeedback>
     </View>
+    </ImageBackground>
   );
 };
-
+// Random de cores Hexadecimal
 const randomHexColor = () => {
   return "#000000".replace(/0/g, function() {
     return (~~(Math.random() * 16)).toString(16);
@@ -27,14 +29,12 @@ const randomHexColor = () => {
 };
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: "center",
-    paddingTop: StatusBar.currentHeight,
-    backgroundColor: "#ecf0f1",
-    padding: 8
+  touchable: {
+     height: wp("200%")
   },
-  touchable: { flex: 0.5, borderColor: "black", borderWidth: 1 },
+  Background:{
+    height: wp("170%"),
+  }
 });
 
 export default App;

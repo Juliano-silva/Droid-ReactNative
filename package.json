@@ -89,7 +89,8 @@
     "rn-perfect-sketch-canvas": "^0.3.0",
     "styled-components": "^5.3.6",
     "yarn": "^1.22.19",
-    "expo-font": "~10.2.0"
+    "expo-font": "~10.2.0",
+    "expo-battery": "~6.3.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",

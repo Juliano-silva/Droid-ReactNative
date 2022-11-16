@@ -1,6 +1,7 @@
 import React,{useState} from "react"
-import { View,Text,TextInput,Button, ImageBackground } from "react-native"
+import { View,Text,TextInput,Button, ImageBackground,StyleSheet } from "react-native"
 import {WebBackground,CorpoWeb,InputWeb,Enviar,BotWeb,TextWeb} from './Styles/StyleWeb'
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 import {WebView} from 'react-native-webview'
 export default function Web(){
     const [url,setUrl] = useState('https://www.linguee.com.br/ingles-portugues/traducao/translate.html');
@@ -15,15 +16,10 @@ export default function Web(){
                 </Enviar>
             </CorpoWeb>
         )
-    }else{
-        return(
-            <>
-            <WebView source={{uri:url}}/>
-            <TextInput  onChangeText={text => setUrl(text)} value={url} placeholder="Coloque aqui a url do site"/>
-                <View>
-                    <Button onPress={() => setGo(true)} title="Iniciar"/>
-                </View>
-            </>
-        )
     }
 }
+const style = StyleSheet.create({
+    Background:{
+        height: wp("170%"),
+      }
+})
