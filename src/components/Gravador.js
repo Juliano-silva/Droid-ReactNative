@@ -19,7 +19,7 @@ export default function App() {
           allowsRecordingIOS: true,
           playsInSilentModeIOS: true
         });
-        
+
         const { recording } = await Audio.Recording.createAsync(
           Audio.RECORDING_OPTIONS_PRESET_HIGH_QUALITY
         );
@@ -59,7 +59,7 @@ export default function App() {
   function getRecordingLines() {
     return recordings.map((recordingLine, index) => {
       return (
-        <Gravações key={index}>
+        <Gravações key={index} >
           <Gravação >Diario de bordo {index + 1}  {recordingLine.duration}</Gravação>
           <Play onPress={() => recordingLine.sound.replayAsync()}>Iniciar</Play>
           <Compartilhar onPress={() => Sharing.shareAsync(recordingLine.file)}>Compartilhar</Compartilhar>

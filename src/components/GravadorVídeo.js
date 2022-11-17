@@ -5,6 +5,7 @@ import { useEffect,useState,useRef } from "react"
 import { shareAsync } from "expo-sharing";
 import { Camera } from "expo-camera";
 import { Video } from "expo-av";
+import {BotãoPlay,GravadorView} from './Styles/StyleGravadorVídeo'
 export default function GravadorV(){
     let cameraRef = useRef();
     const [hasCameraPermission,setHasCameraPermission] = useState();
@@ -67,10 +68,12 @@ export default function GravadorV(){
     }
     return(
         <Camera ref={cameraRef}>
-            <View>
-                <Button title={isRecording ? "Stop Record" : "Record Video"}
+            <GravadorView>
+                <BotãoPlay>
+                <Button  title={isRecording ? "Stop Record" : "Record Video"}
                 onPress={isRecording?stopRecording : recordVideo}/>
-            </View>
+                </BotãoPlay>
+            </GravadorView>
         </Camera>
     )
 }

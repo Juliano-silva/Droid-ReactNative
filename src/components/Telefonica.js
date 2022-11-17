@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, SafeAreaView, ScrollView,ImageBackground } from 'react-native';
-import {TelefonicaBk,NameText,NumText,CorpoTele} from './Styles/StyleTelefonica'
+import {TelefonicaBk,NameText,NumText,CorpoTele,TextoLista} from './Styles/StyleTelefonica'
 import * as Contacts from 'expo-contacts';
 import { useEffect, useState } from 'react';
 
@@ -28,7 +28,7 @@ export default function Telefonica() {
       return data.map((data, index) => {
         return (
           <View key={index}>
-            <Text>{data.label}: {data[property]}</Text>
+            <Text style={{color:"white"}}>{data.label}: {data[property]}</Text>
           </View>
         )
       });
@@ -54,6 +54,7 @@ export default function Telefonica() {
   return (
     <SafeAreaView >
       <TelefonicaBk source={require("../../assets/Arquivos/24.jpg")}>
+        <TextoLista>Lista Telefonica</TextoLista>
       <ScrollView>
         {getContactRows()}
       </ScrollView>

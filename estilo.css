@@ -1,3 +1,7 @@
 body{
-    border: 2px solid blue;
+    color: rgb(238, 9, 123);
+    text-shadow: 2px 2px 2px white;
+    text-align: center;
+    font-size: 20px;
+    margin-top: 20px;
 }
