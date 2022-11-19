@@ -28,7 +28,7 @@ color: black;
 margin: auto;
 background: palevioletred;
 font-style: italic;
-margin-top: -8px;
+margin-top: -18px;
 width: 200px;
 text-align: center;
 border-radius: 20px;

@@ -5,7 +5,7 @@ const App = () => {
   const [rippleColor, setRippleColor] = useState(randomHexColor());
   const [rippleOverflow, setRippleOverflow] = useState(false);
   return (
-    <ImageBackground style={styles.Background} source={require("../../assets/Arquivos/23.jpg")}>
+    <ImageBackground style={{height:"100%"}} source={require("../../assets/Arquivos/23.jpg")}>
     <View>
       <TouchableNativeFeedback
         onPress={() => {
@@ -31,9 +31,6 @@ const randomHexColor = () => {
 const styles = StyleSheet.create({
   touchable: {
      height: wp("200%")
-  },
-  Background:{
-    height: wp("170%"),
   }
 });
 

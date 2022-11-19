@@ -9,7 +9,7 @@ text-align: center;
 width: 80%;
 margin: auto;
 border-radius: 20px;
-font-size: 40px;
+font-size: 35px;
 `
 export const TextoLista = styled.Text`
 color: white;

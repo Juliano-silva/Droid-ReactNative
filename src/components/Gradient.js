@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { StyleSheet,View,Button,TouchableOpacity,Text } from 'react-native';
+import { StyleSheet,View,Button,TouchableOpacity,Text,ImageBackground } from 'react-native';
 import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
+import {CircleTouch,ViewGradient} from './Styles/StyleGradient'
 import { LinearGradient } from 'expo-linear-gradient';
 export default class Gradient extends Component {
   constructor(){
@@ -24,15 +25,15 @@ this.setState({
 }
   render() {
     return (
-      <View style={[styles.MainContainer, { backgroundColor: this.state.ColorHolder }]} >
-        <LinearGradient colors={
+      <ImageBackground source={require("../../assets/Arquivos/27.jpg")} style={{height: "100%",width:"100%"}}>
+      <ViewGradient style={styles.MainContainer} >
+        <LinearGradient  style={styles.circle} colors={
             [this.state.ColorHolder,this.state.ColorHolder1,this.state.ColorHolder2]}>
-        <TouchableOpacity onPress={this.ChangeColorFunction}
-         style={styles.circle}>
-            <Text style={styles.Cores}>{this.state.ColorHolder}</Text>
-            </TouchableOpacity>
+        <CircleTouch onPress={this.ChangeColorFunction}>
+            </CircleTouch>
             </LinearGradient>
-      </View>
+      </ViewGradient>
+      </ImageBackground>
     );
   }
 }
@@ -44,8 +45,7 @@ const styles = StyleSheet.create(
     justifyContent: 'center',
     alignItems: 'center',
   },
-  Cores:{
-    fontSize:wp("10%"),
+  circle:{
+    borderRadius: wp("50%")
   }
-
 });

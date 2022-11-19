@@ -31,7 +31,6 @@ import GeradorSenha from '../components/GeradorSenha'
 // Novos de Novo
 import AudioMeme from '../components/AudioMeme'
 import Telefonica from '../components/Telefonica'
-import Tradutor from '../components/Tradutor'
 import WaveButton from '../components/WaveButton'
 import GravadorV from '../components/GravadorVídeo'
 import GeradorPDF from '../components/GeradorPDF'
@@ -269,15 +268,6 @@ export default function Sidebar(){
         <Drawer.Screen name='WaveButton' component={WaveButton} options={{
           drawerIcon:() => (
             <Icon name='magic' size={25} color={'yellow'}/>
-          ),
-            headerTransparent: true,
-            headerTitleStyle:{
-              color:'transparent',
-            }
-        }}/>
-        <Drawer.Screen name='Tradutor' component={Tradutor} options={{
-          drawerIcon:() => (
-            <Icon name='send' size={25} color={'yellow'}/>
           ),
             headerTransparent: true,
             headerTitleStyle:{

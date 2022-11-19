@@ -69,7 +69,7 @@ export default function App() {
   }
 
   return (
-    <ImgGrava source={require('../../assets/Arquivos/19.jpg')}>
+    <ImgGrava source={require('../../assets/Arquivos/26.jpg')}>
     <ScrollView>
     <CorpoGrava>
       <Text>{message}</Text>
