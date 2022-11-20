@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "Reborn",
-    "slug": "Reborn",
+    "name": "Re:born",
+    "slug": "Re:born",
     "version": "1.5.5",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -9,7 +9,7 @@
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#19171C"
+      "backgroundColor": "#1a181d"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -23,7 +23,7 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#19171C"
+        "backgroundColor": "#1a181d"
       },
       "package": "com.julianoalmeida.app"
     },

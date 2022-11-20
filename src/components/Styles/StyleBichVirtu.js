@@ -11,10 +11,11 @@ margin-left: 40%;
 `
 export const Nome = styled.Text`
     color: white;
-    font-size: 25px;
-    width:  65px;
-    height: 65px;
-    border-radius: 50px;
+    width:  105px;
+    height: 505px;
     text-align: center;
     margin-top: 15px;
+    margin: auto;
+    text-align: center;
 `
+export const Corpo = styled.View``

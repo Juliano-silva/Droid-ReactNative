@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { StyleSheet, View,ImageBackground, Text, PanResponder, Animated,  } from "react-native";
-import {BichBk,Row,CorpoVirtu,Nome} from './Styles/StyleBichVirtu'
+import {BichBk,Row,CorpoVirtu,Nome,Corpo} from './Styles/StyleBichVirtu'
 import { LinearGradient } from 'expo-linear-gradient';
 class Draggable extends Component {
   constructor(props) {
@@ -26,17 +26,17 @@ class Draggable extends Component {
           })
           this.state.pan.setValue({ x:0, y:0})
         },
-        onPanResponderMove: Animated.event([ 
+        onPanResponderMove: Animated.event([
           null, { dx: this.state.pan.x, dy: this.state.pan.y }
         ]),
-       
+
       });
   }
 
- 
+
   render() {
     return (
-      <View>
+      <View >
         {this.renderDraggable()}
       </View>
     );
@@ -48,17 +48,17 @@ class Draggable extends Component {
     }
     if (this.state.showDraggable) {
       return (
-        <View style={{ position: "absolute" }}>
-          <Animated.View 
+        <Corpo style={{ position: "absolute" }}>
+          <Animated.View
             {...this.panResponder.panHandlers}
             style={[panStyle]}
           >
         <LinearGradient colors={['#4158D0','#C850C0','#FFCC70']}
         style={styles.circle}>
-          <Nome>J</Nome>
+          
         </LinearGradient>
           </Animated.View>
-        </View>
+        </Corpo>
       );
     }
   }
@@ -81,6 +81,11 @@ export default class App extends Component {
           <Draggable />
           <Draggable />
           <Draggable />
+          <Draggable />
+          <Draggable />
+          <Draggable />
+          <Draggable />
+          <Draggable />
         </CorpoVirtu>
         </BichBk>
       </View>
@@ -93,12 +98,17 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   ballContainer: {
-    height:350
+    height:450
   },
   circle: {
-    opacity: 1,
-    width:  65,
-    height: 65,
-    borderRadius: 50
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    width:350,
+    height:500,
+    borderRadius:20,
+    marginTop: -200,
+    margin:"auto",
+    marginLeft: -133,
   },
 });
