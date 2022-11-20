@@ -65,6 +65,18 @@ export default function App() {
   async function playSound58() {const { sound } = await Audio.Sound.createAsync( require('../../assets/Sound/xiiii.mp3'));setSound(sound);await sound.playAsync();}
   async function playSound59() {const { sound } = await Audio.Sound.createAsync( require('../../assets/Sound/XJ6.mp3'));setSound(sound);await sound.playAsync();}
   async function playSound60() {const { sound } = await Audio.Sound.createAsync( require('../../assets/Sound/Yugi.mp3'));setSound(sound);await sound.playAsync();}
+  async function playSound61() {const { sound } = await Audio.Sound.createAsync( require('../../assets/Sound/2horas.mp3'));setSound(sound);await sound.playAsync();}
+  async function playSound62() {const { sound } = await Audio.Sound.createAsync( require('../../assets/Sound/3horas.mp3'));setSound(sound);await sound.playAsync();}
+  async function playSound63() {const { sound } = await Audio.Sound.createAsync( require('../../assets/Sound/Aplausos.mp3'));setSound(sound);await sound.playAsync();}
+  async function playSound64() {const { sound } = await Audio.Sound.createAsync( require('../../assets/Sound/Bateria.mp3'));setSound(sound);await sound.playAsync();}
+  async function playSound65() {const { sound } = await Audio.Sound.createAsync( require('../../assets/Sound/Delícia.mp3'));setSound(sound);await sound.playAsync();}
+  async function playSound66() {const { sound } = await Audio.Sound.createAsync( require('../../assets/Sound/ExplosãoMeme.mp3'));setSound(sound);await sound.playAsync();}
+  async function playSound67() {const { sound } = await Audio.Sound.createAsync( require('../../assets/Sound/FlashBack.mp3'));setSound(sound);await sound.playAsync();}
+  async function playSound68() {const { sound } = await Audio.Sound.createAsync( require('../../assets/Sound/Oooooh.mp3'));setSound(sound);await sound.playAsync();}
+  async function playSound69() {const { sound } = await Audio.Sound.createAsync( require('../../assets/Sound/Tempo.mp3'));setSound(sound);await sound.playAsync();}
+  async function playSound70() {const { sound } = await Audio.Sound.createAsync( require('../../assets/Sound/TIRO.mp3'));setSound(sound);await sound.playAsync();}
+  async function playSound71() {const { sound } = await Audio.Sound.createAsync( require('../../assets/Sound/TomanoteuCuPorra.mp3'));setSound(sound);await sound.playAsync();}
+  async function playSound72() {const { sound } = await Audio.Sound.createAsync( require('../../assets/Sound/WellBe.mp3'));setSound(sound);await sound.playAsync();}
   React.useEffect(() => {
     return sound
       ? () => {
@@ -140,6 +152,18 @@ export default function App() {
       <ButtonMeme onPress={playSound58}>59.Xiiii</ButtonMeme>
       <ButtonMeme onPress={playSound59}>60.XJ6</ButtonMeme>
       <ButtonMeme onPress={playSound60}>61.Seu Porra</ButtonMeme>
+      <ButtonMeme onPress={playSound61}>62.2 horas Depois</ButtonMeme>
+      <ButtonMeme onPress={playSound62}>63.3 horas Depois</ButtonMeme>
+      <ButtonMeme onPress={playSound63}>64.Aplausos</ButtonMeme>
+      <ButtonMeme onPress={playSound64}>65.Bateria</ButtonMeme>
+      <ButtonMeme onPress={playSound65}>66.Delícia</ButtonMeme>
+      <ButtonMeme onPress={playSound66}>67.Explosão Meme</ButtonMeme>
+      <ButtonMeme onPress={playSound67}>68.FlashBack</ButtonMeme>
+      <ButtonMeme onPress={playSound68}>69.Oooooh</ButtonMeme>
+      <ButtonMeme onPress={playSound69}>70.Muito Tempo</ButtonMeme>
+      <ButtonMeme onPress={playSound70}>71.Tiro</ButtonMeme>
+      <ButtonMeme onPress={playSound71}>72.Toma no teu Cu Porra</ButtonMeme>
+      <ButtonMeme onPress={playSound72}>73.We'll be right back</ButtonMeme>
     </View>
     </ScrollView>
     </ImageBackground>
